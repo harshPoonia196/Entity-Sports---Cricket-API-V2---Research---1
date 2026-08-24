@@ -2,6 +2,17 @@ opencollection: 1.0.0
 
 info:
   name: Entity Sports - Cricket API V2 - Research - 1
+config:
+  proxy:
+    inherit: true
+    config:
+      protocol: http
+      hostname: ""
+      port: ""
+      auth:
+        username: ""
+        password: ""
+      bypassProxy: ""
 
 request:
   variables:
@@ -22,11 +33,11 @@ request:
     - name: status
       value: ""
     - name: sid
-      value: "2018"
+      value: "2022"
     - name: cid
-      value: "128440"
+      value: "123126"
     - name: mid
-      value: "72533"
+      value: "87002"
     - name: tid
       value: "127857"
     - name: pid
