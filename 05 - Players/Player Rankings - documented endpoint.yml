@@ -1,0 +1,28 @@
+info:
+  name: Player Rankings - documented endpoint
+  type: http
+  seq: 4
+
+http:
+  method: GET
+  url: "{{base_url}}/players/ranks?token={{access_token}}&per_page={{per_page}}&paged={{paged}}"
+  params:
+    - name: token
+      value: "{{access_token}}"
+      type: query
+    - name: per_page
+      value: "{{per_page}}"
+      type: query
+    - name: paged
+      value: "{{paged}}"
+      type: query
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+  forwardAuthorizationHeader: false
+
+docs: Entity Sports' official Cricket API article documents /v2/players/ranks.

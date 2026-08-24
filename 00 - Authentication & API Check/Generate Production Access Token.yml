@@ -1,0 +1,36 @@
+info:
+  name: Generate Production Access Token
+  type: http
+  seq: 1
+
+http:
+  method: POST
+  url: "{{base_url}}/auth/"
+  headers:
+    - name: Content-Type
+      value: application/x-www-form-urlencoded
+  body:
+    type: form-urlencoded
+    data:
+      - name: access_key
+        value: "{{access_key}}"
+      - name: secret_key
+        value: "{{secret_key}}"
+      - name: extend
+        value: "1"
+  auth: inherit
+
+runtime:
+  scripts:
+    - type: after-response
+      code: |-
+        const data = res.getBody();
+        if (data.response && data.response.token) bru.setGlobalEnvVar('access_token', data.response.token);
+        if (data.response && data.response.expires) bru.setGlobalEnvVar('token_expires', String(data.response.expires));
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+  forwardAuthorizationHeader: false

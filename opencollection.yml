@@ -1,0 +1,50 @@
+opencollection: 1.0.0
+
+info:
+  name: Entity Sports - Cricket API V2 - Research - 1
+
+request:
+  variables:
+    - name: base_url
+      value: https://restapi.entitysport.com/v2
+    - name: sandbox_base_url
+      value: https://restapi.entitysport.com/sandbox/cricket
+    - name: access_token
+      value: ec471071441bb2ac538a0ff901abd249
+    - name: access_key
+      value: ""
+    - name: secret_key
+      value: ""
+    - name: per_page
+      value: "20"
+    - name: paged
+      value: "1"
+    - name: status
+      value: ""
+    - name: sid
+      value: "2018"
+    - name: cid
+      value: "128440"
+    - name: mid
+      value: "72533"
+    - name: tid
+      value: "127857"
+    - name: pid
+      value: "44114"
+    - name: inning_num
+      value: "1"
+    - name: stats_type
+      value: ""
+  scripts:
+    - type: before-request
+      code: if (!bru.getGlobalEnvVar('access_token')) bru.setGlobalEnvVar('access_token', 'ec471071441bb2ac538a0ff901abd249');
+
+docs:
+  content: Research-backed Cricket API V2 collection. Core paths are taken from Entity Sports' official cricket Node SDK and cross-checked against Entity Sports documentation/blog. Development token is preconfigured. Newer Cricket Stats/Prediction/Exchange products are documented by Entity Sports, but their exact REST paths were not publicly retrievable, so they are listed as documentation-only notes rather than guessed requests.
+  type: text/markdown
+bundled: false
+extensions:
+  bruno:
+    ignore:
+      - node_modules
+      - .git

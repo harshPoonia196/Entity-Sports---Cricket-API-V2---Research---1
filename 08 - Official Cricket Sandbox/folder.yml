@@ -1,0 +1,11 @@
+info:
+  name: 08 - Official Cricket Sandbox
+  type: folder
+  seq: 9
+
+request:
+  auth: inherit
+
+docs:
+  content: "Official sandbox base URL: https://restapi.entitysport.com/sandbox/cricket/. Entity Sports says the Cricket API V2 URL paths remain the same and only the base URL changes. Published sandbox IDs: cid 128440/128401, mid 72533/65192, tid 127857/120141, pid 44114/334."
+  type: text/markdown
