@@ -1,7 +1,7 @@
 info:
   name: 06 - ICC Rankings
   type: folder
-  seq: 7
+  seq: 13
 
 request:
   auth: inherit

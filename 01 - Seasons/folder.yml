@@ -1,7 +1,7 @@
 info:
   name: 01 - Seasons
   type: folder
-  seq: 2
+  seq: 3
 
 request:
   auth: inherit

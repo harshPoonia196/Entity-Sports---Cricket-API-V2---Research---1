@@ -1,7 +1,7 @@
 info:
   name: Match list
   type: http
-  seq: 10
+  seq: 18
 
 http:
   method: GET
@@ -13,13 +13,13 @@ http:
     - name: limit
       value: "10"
       type: query
+    - name: cid
+      value: "129438"
+      type: query
     - name: status
       value: "2"
       type: query
       disabled: true
-    - name: cid
-      value: "129438"
-      type: query
     - name: sortBy
       value: playerName
       type: query
